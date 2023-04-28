@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //charAt()문자열의 지정된 인덱스(위치)에 있는 문자 반환
+    let x = "Hello ";
+    let y = x.charAt(1);
+    console.log(y);
+    //let z = x.concat(y);//두문자열을 연결
+    //let z = x.indexOf("hello");//문자열에서 값이 처음으로 나타나는 위치 반환 값이 없으면 -1 반환 대소문자 구분된다.
+   //let z = x.indexOf("l")
+   //let z = x.lastIndexOf("l");//문자열에서 지정된 값이 마지막으로 나타나는 인덱스(위치) 반환
+   //let z = x.length;//스페이스바(공백)도 길이에 포함된다
+   //let z = x.padStart(10,"a");//지정된 길이가 될때까지 지정된 문자열로 채워줌
+  //let z = x.padEnd(10,"a");
+    //let z = x.repeat(3);//지정된 값으로 복사본이 생성(반복)
+    //let z = x.replace("Hello","world");
+    //let z = x.search("H");
+    //let z = x.slice(3);//지정된 문자열의 앞에서부터 0으로 시작
+    //let z = x.slice(-3,-2);//지정된 문자열의 끝에서부터 1로 시작 음의 값이 들어감
+    //let str = "aaa bb cc ddd";
+    //let z = str.split(" ");//지정된 문자로 분할 --> 새배열로 반환
+    //console.log(z);
+    let str = "aaa,bb,cc,ddd";
+    let z = str.split(",");
+    //let str1 = z.join("*");
+    //z.pop();마지막 배열 사라짐
+    //z.push("new");//끝나는 부분에 ()안에 들어가는걸 새로 추가
+    //z.shift();//젤 첫번째 요소 사라짐
+    //z.unshift("new");//시작하는 부분에 ()안에 들어가는걸 새로 추가
+    //z.splice(1,0,"new");
+    //z.splice(1,1,"new","add");
+    let str2 = z.slice(2);//cc, ddd
+    let str3 = z.slice(1,2);//bb
+    let str4 = str2.concat(str3);//concat 결합
+    //str4.sort();//오름순으로 정렬(알파벳 순으로 정렬)
+    str4.sort().reverse();//내림순으로 정렬
+    let txt = "Hello world";
+    //let txt1 = txt.substr(0);//지정된 인덱스번호에서 지정된 값으로 문자열을 추출
+    //let txt1 = txt.substr(0,3);
+    //let txt1 = txt.substr(-3,2);
+    //let txt1 = txt.substring(0);
+    //let txt1 = txt.substring(-1);//start가 0보다 작으면 인덱스 0부터 시작
+    //let txt1 = txt.toUpperCase();
+    let txt1 = txt.toLowerCase();
+    console.log(txt1);  
+    </script> 
+</head>
+<body>
+ <pre><p id="demo1"></p></pre>
+ <pre><p id="demo2"></p></pre>
+ <script>
+    let t = "                 Hello world          ";
+    //let result = t.trim();//공백지움
+    //let result = t.trimStart();//왼쪽 공백 지움
+    let result = t.trimEnd();//오른쪽 공백 지움
+    document.getElementById("demo1").innerHTML = t;    
+    document.getElementById("demo2").innerHTML = result;    
+ </script>
+</body>
+</html>
