@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        float: left;
+        width: 100px;
+        background: paleturquoise;
+      }
+    </style>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        /*$("li").eq(0).css("backgroundColor", "pink");
+        $("li").eq(1).css("backgroundColor", "palevioletred");
+        $("li").eq(2).css("backgroundColor", "plum");
+        $("li").eq(3).css("backgroundColor", "palegoldenrod");*/
+        $("li").each(function (index, element) {
+          console.log(index);
+          console.log(element);
+          let bg = $(this).data("test");
+          console.log("bg:" + bg);
+          $(this).css("backgroundColor", bg);
+        });
+        $("li").click(function () {
+          //   $("body")
+          //     .css("backgroundColor", $(this).data("test"))
+          $("body").animate({ backgroundColor: $(this).data("test") }, 1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li data-test="#3781F0">배경1</li>
+      <li data-test="#FFFDCA">배경2</li>
+      <li data-test="#36CE00">배경3</li>
+      <li data-test="#DF5576">배경4</li>
+    </ul>
+  </body>
+</html>
